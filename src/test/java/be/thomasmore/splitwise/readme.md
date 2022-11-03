@@ -23,8 +23,6 @@ In deze klasse werden ook reeds 2 methodes voorzien:  **billFor** en **pay**.
     * De name is altijd correct - je moet er dus GEEN rekening mee houden dat name leeg kan zijn of rare characters kan bevatten
   * Het resultaat van de functie billFor is de rekening (positief of negatief) voor die persoon. Voorlopig retourneert de methode 0 (omdat de code anders niet zou compileren): het spreekt dat je dit zal moeten aanpassen.
   * Als de naam niet voorkomt in de vriendengroep dan is het resultaat ook altijd 0
-    DUS:
-    public double billFor(String name)
 
 * functie **pay**.
   * heeft 2 parameters:
@@ -34,8 +32,6 @@ In deze klasse werden ook reeds 2 methodes voorzien:  **billFor** en **pay**.
     * amount: het betaalde bedrag
       * deze is altijd een geldig geheel getal
       * als dit negatief is moet er niets gebeuren
-        DUS:
-        public void pay(String name, int amount)
 
 Aan de header van de constructor en die twee methodes **mag je niets wijzigen**.
 Wat je wél mag toevoegen aan de klasse SplitWise:

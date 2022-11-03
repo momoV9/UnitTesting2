@@ -81,4 +81,9 @@ public class PartyTicketTest {
         assertEquals(45, partyTicket.buyTickets(10,10));
     }
 
+    @Test
+    public void red10AndBlue10happy() {
+        PartyTicket partyTicket = new PartyTicket(true);
+        assertEquals(36, partyTicket.buyTickets(10,10));
+    }
 }

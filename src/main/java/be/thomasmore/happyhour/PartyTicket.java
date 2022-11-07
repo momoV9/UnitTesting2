@@ -15,7 +15,7 @@ public class PartyTicket {
         if (amountRed >= 10) {
             v = v + (amountRed -1) * PRICE_RED;
             if (10 > amountBlue) {
-                b = amountBlue;
+
                 v = v + amountBlue * PRICE_BLUE;
                 if (ok) {
                     v = v - (amountRed -1) * (double) PRICE_RED / 5;

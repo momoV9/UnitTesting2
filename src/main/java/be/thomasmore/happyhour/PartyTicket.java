@@ -44,13 +44,13 @@ public class PartyTicket {
             a = nrs;
             b = nrs2;
             v = v + nrs * PRICE_RED;
-            if (10 > nrs2) {
+            if (10 > nrs2 ) {
                 v = v + nrs2 * PRICE_BLUE;
                 if (ok) {
                     v = v - a * (double) PRICE_RED / 5;
                     v = v - b * (double) PRICE_BLUE / 5;
-                } else
-                    discount += 20;
+                    discount +=20;
+                }
             } else {
                 v = v + (nrs2 - 1) * PRICE_BLUE;
                 b = nrs2 - 1;

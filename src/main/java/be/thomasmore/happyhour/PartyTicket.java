@@ -13,14 +13,16 @@ public class PartyTicket {
     public double buyTickets(int amountRed, int amountBlue) {
         double v = 0;
         if (amountRed >= 10) {
-            v = v + (amountRed -1) * PRICE_RED;
+
             if (10 > amountBlue) {
 
-                v = v + amountBlue * PRICE_BLUE;
+
                 if (ok) {
-                    v = v - (amountRed -1) * (double) PRICE_RED / 5;
-                    v = v - amountBlue * (double) PRICE_BLUE / 5;
+
+                        return (amountRed - 1) * PRICE_RED + amountBlue * PRICE_BLUE - (amountRed - 1) * (double) PRICE_RED / 5 - amountBlue * (double) PRICE_BLUE / 5;
+
                 }
+                return (amountRed - 1) * PRICE_RED + amountBlue * PRICE_BLUE;
             } else {
                 v = getV(amountBlue, v, (amountRed-1));
                 if ((amountRed -1) < 10) {

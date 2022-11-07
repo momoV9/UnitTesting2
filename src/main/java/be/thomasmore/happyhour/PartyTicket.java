@@ -24,9 +24,9 @@ public class PartyTicket {
                 }
                 return (amountRed - 1) * PRICE_RED + amountBlue * PRICE_BLUE;
             } else {
-                v = getV(amountBlue, v, (amountRed-1));
-                if ((amountRed -1) < 10) {
-                    return v;
+
+                if (ok) {
+                    return (amountRed - 1) * PRICE_RED + (amountBlue - 1) * PRICE_BLUE - (amountRed - 1) * (double) PRICE_RED / 5 - (amountBlue - 1) * (double) PRICE_BLUE / 5;
                 }
             }
         } else {

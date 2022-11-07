@@ -13,7 +13,7 @@ public class PartyTicket {
     public double buyTickets(int amountRed, int amountBlue) {
         double v = 0;
         int a;
-        int b = 0;
+        int b;
         double discount = 20;
         if (amountRed >= 10) {
             a = amountRed - 1;

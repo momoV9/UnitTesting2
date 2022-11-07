@@ -1,15 +1,39 @@
 package be.thomasmore.splitwise;
 
-public class SplitWise {
-    public SplitWise(String[] names) {
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
+public class SplitWise {
+    private final Map<String, Integer> bills;
+    private boolean isDebtCalculated = false;
+
+    public SplitWise(String[] names) {
+        bills = new HashMap<>();
+        Arrays.stream(names).toList().forEach(name -> bills.put(name, 0));
     }
 
     public double billFor(String name) {
-        return 0;
+        return bills.getOrDefault(name, 0);
     }
 
     public void pay(String name, int amount) {
-
+        if (bills.containsKey(name)) {
+            if(bills.get(name) == 0) {
+                bills.put(name, bills.get(name) + amount);
+                if(!isDebtCalculated){
+                    bills.forEach((key, value) -> {
+                        if(!key.equals(name)){
+                            bills.put(key, -1 * (amount / bills.size()));
+                        }
+                    });
+                    isDebtCalculated = true;
+                }
+            } else {
+                bills.put(name, bills.get(name) - amount);
+            }
+        } else {
+            bills.put(name, bills.get(name) + amount);
+        }
     }
 }

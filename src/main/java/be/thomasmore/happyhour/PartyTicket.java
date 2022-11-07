@@ -31,18 +31,17 @@ public class PartyTicket {
                 }
             }
         } else {
-            a = amountRed;
             b = amountBlue;
             v = v + amountRed * PRICE_RED;
             if (10 > amountBlue) {
                 v = v + amountBlue * PRICE_BLUE;
                 if (ok) {
-                    v = v - a * (double) PRICE_RED / 5;
-                    v = v - b * (double) PRICE_BLUE / 5;
+                    v = v - amountRed * (double) PRICE_RED / 5;
+                    v = v - amountBlue * (double) PRICE_BLUE / 5;
 
                 }
             } else {
-                v = getV(amountBlue, v, a);
+                v = getV(amountBlue, v, amountRed);
             }
         }
         return v;

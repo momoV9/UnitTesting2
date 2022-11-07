@@ -12,7 +12,6 @@ public class PartyTicket {
 
     public double buyTickets(int amountRed, int amountBlue) {
         double v = 0;
-        int b;
         if (amountRed >= 10) {
             v = v + (amountRed -1) * PRICE_RED;
             if (10 > amountBlue) {

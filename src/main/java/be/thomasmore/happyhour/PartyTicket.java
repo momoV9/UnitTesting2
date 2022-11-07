@@ -25,12 +25,7 @@ public class PartyTicket {
                     v = v - b * (double) PRICE_BLUE / 5;
                 }
             } else {
-                v = v + (amountBlue - 1) * PRICE_BLUE;
-                b = amountBlue - 1;
-                if (ok) {
-                    v = v - a * (double) PRICE_RED / 5;
-                    v = v - b * (double) PRICE_BLUE / 5;
-                }
+                v = getV(amountBlue, v, a);
                 if (a < 10) {
                     return v;
                 }
@@ -47,13 +42,19 @@ public class PartyTicket {
 
                 }
             } else {
-                v = v + (amountBlue - 1) * PRICE_BLUE;
-                b = amountBlue - 1;
-                if (ok) {
-                    v = v - a * (double) PRICE_RED / 5;
-                    v = v - b * (double) PRICE_BLUE / 5;
-                }
+                v = getV(amountBlue, v, a);
             }
+        }
+        return v;
+    }
+
+    private double getV(int amountBlue, double v, int a) {
+        int b;
+        v = v + (amountBlue - 1) * PRICE_BLUE;
+        b = amountBlue - 1;
+        if (ok) {
+            v = v - a * (double) PRICE_RED / 5;
+            v = v - b * (double) PRICE_BLUE / 5;
         }
         return v;
     }

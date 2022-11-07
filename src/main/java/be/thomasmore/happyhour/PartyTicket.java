@@ -45,7 +45,7 @@ public class PartyTicket {
                     v = v - a * (double) PRICE_RED / 5;
                     v = v - b * (double) PRICE_BLUE / 5;
 
-                }  else ;
+                }
             } else {
                 v = v + (amountBlue - 1) * PRICE_BLUE;
                 b = amountBlue - 1;

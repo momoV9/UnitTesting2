@@ -43,14 +43,4 @@ public class PartyTicket {
 
     }
 
-    private double getV(int amountBlue, double v, int amountRed) {
-
-        v = v + (amountBlue - 1) * PRICE_BLUE;
-
-        if (ok) {
-            v = v - amountRed * (double) PRICE_RED / 5;
-            v = v - (amountBlue-1) * (double) PRICE_BLUE / 5;
-        }
-        return v;
-    }
 }

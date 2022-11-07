@@ -14,7 +14,6 @@ public class PartyTicket {
         double v = 0;
         int a;
         int b;
-        double discount = 20;
         if (amountRed >= 10) {
             a = amountRed - 1;
             v = v + a * PRICE_RED;
@@ -25,7 +24,7 @@ public class PartyTicket {
                     v = v - a * (double) PRICE_RED / 5;
                     v = v - b * (double) PRICE_BLUE / 5;
                 } else
-                    discount = 0;
+                    ;
             } else {
                 v = v + (amountBlue - 1) * PRICE_BLUE;
                 b = amountBlue - 1;
@@ -33,7 +32,7 @@ public class PartyTicket {
                     v = v - a * (double) PRICE_RED / 5;
                     v = v - b * (double) PRICE_BLUE / 5;
                 } else
-                    discount = 0;
+                    ;
                 if (a < 10) {
                     return v;
                 }
@@ -48,7 +47,7 @@ public class PartyTicket {
                     v = v - a * (double) PRICE_RED / 5;
                     v = v - b * (double) PRICE_BLUE / 5;
 
-                }  else discount +=20;
+                }  else ;
             } else {
                 v = v + (amountBlue - 1) * PRICE_BLUE;
                 b = amountBlue - 1;

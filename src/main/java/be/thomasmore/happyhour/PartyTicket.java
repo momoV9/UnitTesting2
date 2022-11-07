@@ -11,7 +11,6 @@ public class PartyTicket {
     }
 
     public double buyTickets(int amountRed, int amountBlue) {
-        double v = 0;
         if (amountRed >= 10) {
 
             if (10 > amountBlue) {
@@ -32,17 +31,16 @@ public class PartyTicket {
         } else {
 
             if (10 > amountBlue) {
-                v = v + amountBlue * PRICE_BLUE;
-                if (ok) {
-                    v = v - amountRed * (double) PRICE_RED / 5;
-                    v = v - amountBlue * (double) PRICE_BLUE / 5;
 
-                }
+                if (ok) {
+                    return amountRed * PRICE_RED + amountBlue * PRICE_BLUE - amountRed * (double) PRICE_RED / 5 - amountBlue * (double) PRICE_BLUE / 5;
+
+                }return amountRed * PRICE_RED + amountBlue * PRICE_BLUE;
             } else {
-                v = getV(amountBlue, v, amountRed);
-            }
+                if (ok){return amountRed * PRICE_RED + (amountBlue - 1) * PRICE_BLUE - amountRed * (double) PRICE_RED / 5 - (amountBlue - 1) * (double) PRICE_BLUE / 5;}
+            }return amountRed * PRICE_RED + (amountBlue - 1) * PRICE_BLUE;
         }
-        return v;
+
     }
 
     private double getV(int amountBlue, double v, int amountRed) {

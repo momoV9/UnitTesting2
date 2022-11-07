@@ -27,10 +27,10 @@ public class PartyTicket {
 
                 if (ok) {
                     return (amountRed - 1) * PRICE_RED + (amountBlue - 1) * PRICE_BLUE - (amountRed - 1) * (double) PRICE_RED / 5 - (amountBlue - 1) * (double) PRICE_BLUE / 5;
-                }
+                }return (amountRed - 1) * PRICE_RED + (amountBlue - 1) * PRICE_BLUE;
             }
         } else {
-            v = v + amountRed * PRICE_RED;
+
             if (10 > amountBlue) {
                 v = v + amountBlue * PRICE_BLUE;
                 if (ok) {

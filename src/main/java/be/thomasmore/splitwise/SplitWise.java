@@ -5,19 +5,19 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class SplitWise {
-    private final Map<String, Integer> bills;
+    private final Map<String, Double> bills;
     private boolean isDebtCalculated = false;
 
     public SplitWise(String[] names) {
         bills = new HashMap<>();
-        Arrays.stream(names).toList().forEach(name -> bills.put(name, 0));
+        Arrays.stream(names).toList().forEach(name -> bills.put(name, 0.0));
     }
 
     public double billFor(String name) {
-        return bills.getOrDefault(name, 0);
+        return bills.getOrDefault(name, 0.0);
     }
 
-    public void pay(String name, int amount) {
+    public void pay(String name, double amount) {
         if (bills.containsKey(name)) {
             if(bills.get(name) == 0) {
                 bills.put(name, bills.get(name) + amount);

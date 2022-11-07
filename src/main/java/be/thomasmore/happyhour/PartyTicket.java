@@ -31,7 +31,6 @@ public class PartyTicket {
                 }
             }
         } else {
-            b = amountBlue;
             v = v + amountRed * PRICE_RED;
             if (10 > amountBlue) {
                 v = v + amountBlue * PRICE_BLUE;

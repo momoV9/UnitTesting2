@@ -30,8 +30,7 @@ public class PartyTicket {
                 if (ok) {
                     v = v - a * (double) PRICE_RED / 5;
                     v = v - b * (double) PRICE_BLUE / 5;
-                } else
-                    ;
+                }
                 if (a < 10) {
                     return v;
                 }
